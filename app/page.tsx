@@ -20,17 +20,14 @@ const NestedTabsExample = () => {
   const [innerTab1, setInnerTab1] = useState("innerTab1");
   const [innerTab2, setInnerTab2] = useState("innerTab2");
 
-  const handleTabChange = (e) => {
-        setActiveTab(e.tabKey);
-    };
+ 
 
   return (
      <div className="flex w-full flex-col">
    
    <Tabs aria-label="Options"  >
         <Tab key="photos" title="Photos"
-		    value={activeTab} // Controlled by state
-            onChange={handleTabChange} // Updates state when tab change
+		   selectedKey={activeTab} onSelectionChange={setActiveTab}
 		  
 		>
           <Card>
