@@ -20,8 +20,8 @@ const NestedTabsExample = () => {
   const [innerTab1, setInnerTab1] = useState("innerTab1");
   const [innerTab2, setInnerTab2] = useState("innerTab2");
 
-  const handleTabChange = (tabKey: string) => {
-        setActiveTab(tabKey);
+  const handleTabChange = (e) => {
+        setActiveTab(e.tabKey);
     };
 
   return (
