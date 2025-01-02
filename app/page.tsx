@@ -13,14 +13,16 @@ import { siteConfig } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
 import { GithubIcon } from "@/components/icons";
 
-const handleTabChange = (tabKey: string) => {
-        setActiveTab(tabKey);
-    };
+
 
 const NestedTabsExample = () => {
   const [activeTab, setActiveTab] = useState("photos");
   const [innerTab1, setInnerTab1] = useState("innerTab1");
   const [innerTab2, setInnerTab2] = useState("innerTab2");
+
+  const handleTabChange = (tabKey: string) => {
+        setActiveTab(tabKey);
+    };
 
   return (
      <div className="flex w-full flex-col">
