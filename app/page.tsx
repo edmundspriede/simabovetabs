@@ -13,8 +13,12 @@ import { siteConfig } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
 import { GithubIcon } from "@/components/icons";
 
+const handleTabChange = (tabKey) => {
+        setActiveTab(tabKey);
+    };
+
 const NestedTabsExample = () => {
-  const [outerTab, setOuterTab] = useState("tab1");
+  const [activeTab, setActiveTab] = useState("photos");
   const [innerTab1, setInnerTab1] = useState("innerTab1");
   const [innerTab2, setInnerTab2] = useState("innerTab2");
 
@@ -22,7 +26,11 @@ const NestedTabsExample = () => {
      <div className="flex w-full flex-col">
    
    <Tabs aria-label="Options"  >
-        <Tab key="photos" title="Photos">
+        <Tab key="photos" title="Photos"
+		    value={activeTab} // Controlled by state
+            onChange={handleTabChange} // Updates state when tab change
+		  
+		>
           <Card>
             <CardBody>
 			   <Tabs>
