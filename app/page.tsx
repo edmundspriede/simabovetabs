@@ -13,7 +13,7 @@ import { siteConfig } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
 import { GithubIcon } from "@/components/icons";
 
-const handleTabChange = (tabKey) => {
+const handleTabChange = (tabKey: string) => {
         setActiveTab(tabKey);
     };
 
