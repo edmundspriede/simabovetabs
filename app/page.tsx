@@ -20,7 +20,7 @@ const NestedTabsExample = () => {
   const [innerTab1, setInnerTab1] = useState("innerTab1");
   const [innerTab2, setInnerTab2] = useState("innerTab2");
 
-  const handleTabChange = (tabKey: string) => {
+  const handleTabChange = (tabKey: React.FormEvent<HTMLInputElement>) => {
         setActiveTab(tabKey);
     };
 
